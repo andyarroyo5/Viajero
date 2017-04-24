@@ -11,11 +11,26 @@
 |
 */
 
+//Blade error necesary undefined variable
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
-Route::get('/planning', 'HomeController@planning');
+//PageController for main pages
+//Route::get('/home', 'PagesController@index');
+Route::get('/planning', 'PagesController@planning');
+
+
+//Trip Actions
+//Route::get('/create', 'TripsController@create');
+
+Route::resource('places','PlacesController');
+Route::resource('trips','TripsController');
+
+/*Route::group(['middleware' => ['web']], function () {
+    //routes here
+
+})*/

@@ -16,6 +16,42 @@
     </div>
 </div> -->
 
+@if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+@endif
+
+<div class="pull-right">
+    <a class="btn btn-success" href="{{ route('places.create') }}"> Add New Trip</a>
+</div>
+
+<div class="pull-right">
+    <a class="btn btn-success" href="{{ route('places.index') }}"> Places</a>
+</div>
+
+
+
+</div>
+
+{{-- @foreach ($trips as $key => $value)
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title">{{$value->name}}<span class="glyphicon glyphicon-star" style="float:right"></span></h4>
+          <p class="card-text">{{$value->description}}</p>
+          <p class="card-text">{{$value->start_date}}</p>
+          <p class="card-text" style="float:right">{{$value->budget}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+      </div> --}}
+
+
+
+
+
+
 <div class="card-deck">
   <div class="card">
     <div class="card-block">
